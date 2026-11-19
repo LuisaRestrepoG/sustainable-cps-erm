@@ -1,0 +1,59 @@
+PREFIX sinso: <http://www.semanticweb.org/ontologies/sinso#>
+PREFIX erm:   <http://www.semanticweb.org/ontologies/sinso/erm-hs1#>
+PREFIX rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#>
+
+# --- CQ1: What quality attributes must a system include to be sustainable? -----------------
+# Quality attributes of the domain, the SinSO characteristic they are composed of, and the
+# sustainability dimensions they are related to.
+SELECT ?qualityAttribute ?characteristic (GROUP_CONCAT(DISTINCT ?dim; separator=", ") AS ?dimensions)
+WHERE {
+  erm:ERM_HS1 sinso:hasQAS ?qa .
+  ?qa rdfs:label ?qualityAttribute ;
+      sinso:isComposedOf ?ch ;
+      sinso:isRelatedTo ?d .
+  ?ch rdf:type ?chClass . FILTER(STRSTARTS(STR(?chClass), STR(sinso:)))
+  BIND(STRAFTER(STR(?chClass), "#") AS ?characteristic)
+  ?d rdf:type ?dimClass . ?dimClass rdfs:subClassOf sinso:Dimension .
+  BIND(STRAFTER(STR(?dimClass), "#") AS ?dim)
+}
+GROUP BY ?qualityAttribute ?characteristic
+ORDER BY ?qualityAttribute
+
+# ===SPLIT===
+PREFIX sinso: <http://www.semanticweb.org/ontologies/sinso#>
+PREFIX erm:   <http://www.semanticweb.org/ontologies/sinso/erm-hs1#>
+PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#>
+
+# --- CQ7: What are the objectives assigned to the application domain? ----------------------
+SELECT ?qualityAttribute ?objective ?indicator (GROUP_CONCAT(?measure; separator=" | ") AS ?measures)
+WHERE {
+  erm:ERM_HS1 sinso:hasQAS ?qa .
+  ?qa rdfs:label ?qualityAttribute ;
+      sinso:hasObjective ?o .
+  ?o sinso:nameObjective ?objective ;
+     sinso:hasIndicator ?i .
+  ?i sinso:nameIndicator ?indicator ;
+     sinso:obtains ?m .
+  ?m sinso:nameMeasure ?measure .
+}
+GROUP BY ?qualityAttribute ?objective ?indicator
+ORDER BY ?qualityAttribute
+
+# ===SPLIT===
+PREFIX sinso: <http://www.semanticweb.org/ontologies/sinso#>
+PREFIX erm:   <http://www.semanticweb.org/ontologies/sinso/erm-hs1#>
+PREFIX rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs:  <http://www.w3.org/2000/01/rdf-schema#>
+
+# --- CQ8: What quality attributes does the domain contain to be sustainable? ---------------
+# For each sustainability dimension, the quality attributes of the domain related to it.
+SELECT ?dimension (COUNT(DISTINCT ?qa) AS ?numberOfQAs) (GROUP_CONCAT(DISTINCT ?label; separator=", ") AS ?qualityAttributes)
+WHERE {
+  erm:ERM_HS1 sinso:hasQAS ?qa .
+  ?qa rdfs:label ?label ; sinso:isRelatedTo ?d .
+  ?d rdf:type ?dimClass . ?dimClass rdfs:subClassOf sinso:Dimension .
+  BIND(STRAFTER(STR(?dimClass), "#") AS ?dimension)
+}
+GROUP BY ?dimension
+ORDER BY ?dimension

@@ -1,0 +1,1657 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/ontologies/sinso#"
+     xml:base="http://www.semanticweb.org/ontologies/sinso"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/ontologies/sinso">
+        <rdfs:comment>Specification of a high level ontology about software sustainability, and its coding in the OWL language. To be used in the development of sustainable systems.</rdfs:comment>
+        <rdfs:isDefinedBy>Luisa Fernanda Restrepo Gutierrez</rdfs:isDefinedBy>
+        <owl:versionInfo>1.0.0</owl:versionInfo>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/sinso#belongsTo -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/sinso#belongsTo">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/sinso#Scale"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/sinso#TypeOfScale"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/sinso#belongsToMdfb1 -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/sinso#belongsToMdfb1">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/sinso#Modifiability"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/sinso#Changeability"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/sinso#belongsToMdfb2 -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/sinso#belongsToMdfb2">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/sinso#Modifiability"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/sinso#Stability"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/sinso#contributesTo -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/sinso#contributesTo">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/sinso#Evolvability"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/sinso#hasImpact -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/sinso#hasImpact">
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/sinso#Dimension"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/sinso#hasIndicator -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/sinso#hasIndicator">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/sinso#Objective"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/sinso#Indicator"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/sinso#hasObjective -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/sinso#hasObjective">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/sinso#QualityAttribute"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/sinso#Objective"/>
+        <owl:propertyDisjointWith rdf:resource="http://www.semanticweb.org/ontologies/sinso#specifiedFor"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/sinso#hasQAS -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/sinso#hasQAS">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/sinso#Domain"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/sinso#QualityAttribute"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/sinso#hasScale -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/sinso#hasScale">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/sinso#Measurement"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/sinso#Scale"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/sinso#involves -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/sinso#involves">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/sinso#QualityAttribute"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/sinso#isComposedOf -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/sinso#isComposedOf">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/sinso#QualityAttribute"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/sinso#isRelatedTo -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/sinso#isRelatedTo">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/sinso#QualityAttribute"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/sinso#Dimension"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/sinso#mayHas -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/sinso#mayHas">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/sinso#QualityAttribute"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/sinso#Compatibility"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/sinso#FunctionalSuitability"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/sinso#Performance"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/sinso#Reliability"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/sinso#Security"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/sinso#Usability"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/sinso#obtains -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/sinso#obtains">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/sinso#Indicator"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/sinso#Measure"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/sinso#shouldHas -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/sinso#shouldHas">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/sinso#QualityAttribute"/>
+        <rdfs:range>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/sinso#Evolvability"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/sinso#Maintainability"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/sinso#Portability"/>
+                    <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/sinso#Scalability"/>
+                </owl:unionOf>
+            </owl:Class>
+        </rdfs:range>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/sinso#specifiedFor -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/sinso#specifiedFor">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/sinso#QualityAttribute"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/sinso#Domain"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/sinso#uses -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/ontologies/sinso#uses">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/sinso#Measure"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/ontologies/sinso#Measurement"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/sinso#description -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/sinso#description">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/sinso#Changeability"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/sinso#Compatibility"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/sinso#EnergyEfficiency"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/sinso#Evolvability"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/sinso#FunctionalSuitability"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/sinso#Maintainability"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/sinso#Performance"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/sinso#Portability"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/sinso#Reliability"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/sinso#Scalability"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/sinso#Security"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/sinso#Stability"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/sinso#Usability"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/sinso#identifier -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/sinso#identifier">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/sinso#Domain"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/sinso#identifierIndicator -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/sinso#identifierIndicator">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/sinso#Indicator"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/sinso#identifierMeasure -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/sinso#identifierMeasure">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/sinso#Measure"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/sinso#identifierMeasurement -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/sinso#identifierMeasurement">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/sinso#Measurement"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/sinso#identifierObjective -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/sinso#identifierObjective">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/sinso#Objective"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/sinso#identifierScale -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/sinso#identifierScale">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/sinso#Scale"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/sinso#identifierTypeOfScale -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/sinso#identifierTypeOfScale">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/sinso#TypeOfScale"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/sinso#name -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/sinso#name">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/sinso#Domain"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/sinso#nameIndicator -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/sinso#nameIndicator">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/sinso#Indicator"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/sinso#nameMeasure -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/sinso#nameMeasure">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/sinso#Measure"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/sinso#nameMeasurement -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/sinso#nameMeasurement">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/sinso#Measurement"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/sinso#nameObjective -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/sinso#nameObjective">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/sinso#Objective"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/sinso#nameScale -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/sinso#nameScale">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/sinso#Scale"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/sinso#nameTypeOfScale -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/sinso#nameTypeOfScale">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/sinso#TypeOfScale"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/sinso#objective -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/sinso#objective">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/sinso#Domain"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/sinso#value -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/ontologies/sinso#value">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/ontologies/sinso#Scale"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/sinso#Accountability -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/sinso#Accountability">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/sinso#Security"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/sinso#Adaptability -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/sinso#Adaptability">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/sinso#Portability"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/ontologies/sinso#Replaceability"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/sinso#Analysability -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/sinso#Analysability">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/sinso#Maintainability"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/sinso#contributesTo"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/sinso#Evolvability"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/sinso#AppropriatenessRecognizability -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/sinso#AppropriatenessRecognizability">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/sinso#Usability"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/sinso#Authenticity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/sinso#Authenticity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/sinso#Security"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/sinso#Capacity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/sinso#Capacity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/sinso#Performance"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/sinso#Changeability -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/sinso#Changeability"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/sinso#CoExistence -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/sinso#CoExistence">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/sinso#Compatibility"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/ontologies/sinso#Interoperability"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/sinso#Compatibility -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/sinso#Compatibility">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/sinso#hasImpact"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/sinso#Economical"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/sinso#hasImpact"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/sinso#Social"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/sinso#hasImpact"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/sinso#Technical"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/sinso#Confidentiality -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/sinso#Confidentiality">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/sinso#Security"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/sinso#Dimension -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/sinso#Dimension"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/sinso#Domain -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/sinso#Domain"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/sinso#Economical -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/sinso#Economical">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/sinso#Dimension"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/sinso#EnergyEfficiency -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/sinso#EnergyEfficiency">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/sinso#ResourceUtilization"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/sinso#Environmental -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/sinso#Environmental">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/sinso#Dimension"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/sinso#Evolvability -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/sinso#Evolvability">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/sinso#hasImpact"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/sinso#Technical"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/sinso#FunctionalAppropriateness -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/sinso#FunctionalAppropriateness">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/sinso#FunctionalSuitability"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/ontologies/sinso#FunctionalCorrectness"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/sinso#FunctionalCorrectness -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/sinso#FunctionalCorrectness">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/sinso#FunctionalSuitability"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/sinso#FunctionalSuitability -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/sinso#FunctionalSuitability">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/sinso#hasImpact"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/sinso#Economical"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/sinso#hasImpact"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/sinso#Technical"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/sinso#Indicator -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/sinso#Indicator"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/sinso#Individual-Personel -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/sinso#Individual-Personel">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/sinso#Dimension"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/sinso#Integrity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/sinso#Integrity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/sinso#Security"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/sinso#contributesTo"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/sinso#Evolvability"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/sinso#hasImpact"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/sinso#Technical"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/sinso#Interoperability -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/sinso#Interoperability">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/sinso#Compatibility"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/sinso#Learnability -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/sinso#Learnability">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/sinso#Usability"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/sinso#hasImpact"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/sinso#Economical"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/sinso#Maintainability -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/sinso#Maintainability">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/sinso#hasImpact"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/sinso#Technical"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/sinso#Measure -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/sinso#Measure"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/sinso#Measurement -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/sinso#Measurement"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/sinso#Modifiability -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/sinso#Modifiability">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/sinso#Maintainability"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/sinso#contributesTo"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/sinso#Evolvability"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/sinso#hasImpact"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/sinso#Economical"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/sinso#hasImpact"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/sinso#Environmental"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/sinso#Modularity -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/sinso#Modularity">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/sinso#Maintainability"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/sinso#Objective -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/sinso#Objective"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/sinso#Operability -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/sinso#Operability">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/sinso#Usability"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/sinso#Performance -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/sinso#Performance">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/sinso#hasImpact"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/sinso#Economical"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/sinso#Portability -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/sinso#Portability">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/sinso#contributesTo"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/sinso#Evolvability"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/sinso#hasImpact"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/sinso#Economical"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/sinso#hasImpact"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/sinso#Technical"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/sinso#QualityAttribute -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/sinso#QualityAttribute">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/sinso#mayHas"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/sinso#Compatibility"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/sinso#mayHas"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/sinso#FunctionalSuitability"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/sinso#mayHas"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/sinso#Performance"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/sinso#mayHas"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/sinso#Reliability"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/sinso#mayHas"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/sinso#Security"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/sinso#mayHas"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/sinso#Usability"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/sinso#shouldHas"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/sinso#Evolvability"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/sinso#shouldHas"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/sinso#Maintainability"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/sinso#shouldHas"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/sinso#Portability"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/sinso#shouldHas"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/sinso#Scalability"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/sinso#specifiedFor"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/sinso#Domain"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/sinso#Reliability -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/sinso#Reliability">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/sinso#hasImpact"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/sinso#Technical"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/sinso#Replaceability -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/sinso#Replaceability">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/sinso#Portability"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/sinso#ResourceUtilization -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/sinso#ResourceUtilization">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/sinso#Performance"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/sinso#hasImpact"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/sinso#Environmental"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/sinso#Reusability -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/sinso#Reusability">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/sinso#Maintainability"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/sinso#hasImpact"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/sinso#Environmental"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/sinso#Scalability -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/sinso#Scalability">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/sinso#hasImpact"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/sinso#Technical"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/sinso#Scale -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/sinso#Scale"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/sinso#Security -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/sinso#Security">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/sinso#hasImpact"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/sinso#Social"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/sinso#Social -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/sinso#Social">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/sinso#Dimension"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/sinso#Stability -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/sinso#Stability"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/sinso#Technical -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/sinso#Technical">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/sinso#Dimension"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/sinso#Testability -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/sinso#Testability">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/sinso#Maintainability"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/sinso#contributesTo"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/sinso#Evolvability"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/sinso#TimeBehaviour -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/sinso#TimeBehaviour">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/sinso#Performance"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/sinso#hasImpact"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/sinso#Technical"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/sinso#TypeOfScale -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/sinso#TypeOfScale"/>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/sinso#Usability -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/sinso#Usability">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/sinso#hasImpact"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/sinso#Individual-Personel"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/sinso#hasImpact"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/sinso#Social"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/sinso#UserErrorProtection -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/ontologies/sinso#UserErrorProtection">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/ontologies/sinso#Usability"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/ontologies/sinso#hasImpact"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/ontologies/sinso#Economical"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/sinso#Accesability -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/sinso#Accesability">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/sinso#Social"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/sinso#ClimateChange -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/sinso#ClimateChange">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/sinso#Environmental"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/sinso#CustomerSatisfaction -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/sinso#CustomerSatisfaction">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/sinso#Social"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/sinso#DataIntegrity -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/sinso#DataIntegrity">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/sinso#Technical"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/sinso#DecentWork -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/sinso#DecentWork">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/sinso#Social"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/sinso#Diversity -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/sinso#Diversity">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/sinso#Social"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/sinso#Ecosystems -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/sinso#Ecosystems">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/sinso#Environmental"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/sinso#Education -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/sinso#Education">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/sinso#Individual-Personel"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/sinso#Employment -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/sinso#Employment">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/sinso#Social"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/sinso#EnergyResources -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/sinso#EnergyResources">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/sinso#Environmental"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/sinso#Equity -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/sinso#Equity">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/sinso#Social"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/sinso#Evolvability1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/sinso#Evolvability1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/sinso#Evolvability"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/sinso#Inclusiveness -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/sinso#Inclusiveness">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/sinso#Social"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/sinso#Income -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/sinso#Income">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/sinso#Economical"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/sinso#Indicator1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/sinso#Indicator1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/sinso#Indicator"/>
+        <obtains rdf:resource="http://www.semanticweb.org/ontologies/sinso#Measure1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/sinso#Indicator2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/sinso#Indicator2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/sinso#Indicator"/>
+        <obtains rdf:resource="http://www.semanticweb.org/ontologies/sinso#Measure2"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/sinso#Indicator3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/sinso#Indicator3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/sinso#Indicator"/>
+        <obtains rdf:resource="http://www.semanticweb.org/ontologies/sinso#Measure3"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/sinso#Indicator4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/sinso#Indicator4">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/sinso#Indicator"/>
+        <obtains rdf:resource="http://www.semanticweb.org/ontologies/sinso#Measure4"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/sinso#Innovation -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/sinso#Innovation">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/sinso#Technical"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/sinso#Integrity1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/sinso#Integrity1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/sinso#Integrity"/>
+        <contributesTo rdf:resource="http://www.semanticweb.org/ontologies/sinso#Evolvability1"/>
+        <hasImpact rdf:resource="http://www.semanticweb.org/ontologies/sinso#DataIntegrity"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/sinso#Investment -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/sinso#Investment">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/sinso#Economical"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/sinso#Justice -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/sinso#Justice">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/sinso#Social"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/sinso#Longevity -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/sinso#Longevity">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/sinso#Technical"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/sinso#Maintenance -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/sinso#Maintenance">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/sinso#Technical"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/sinso#Measure1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/sinso#Measure1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/sinso#Measure"/>
+        <uses rdf:resource="http://www.semanticweb.org/ontologies/sinso#Measurement1"/>
+        <uses rdf:resource="http://www.semanticweb.org/ontologies/sinso#Measurement5"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/sinso#Measure2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/sinso#Measure2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/sinso#Measure"/>
+        <uses rdf:resource="http://www.semanticweb.org/ontologies/sinso#Measurement2"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/sinso#Measure3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/sinso#Measure3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/sinso#Measure"/>
+        <uses rdf:resource="http://www.semanticweb.org/ontologies/sinso#Measurement3"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/sinso#Measure4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/sinso#Measure4">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/sinso#Measure"/>
+        <uses rdf:resource="http://www.semanticweb.org/ontologies/sinso#Measurement4"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/sinso#Measure5 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/sinso#Measure5">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/sinso#Measure"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/sinso#Measurement1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/sinso#Measurement1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/sinso#Measurement"/>
+        <hasScale rdf:resource="http://www.semanticweb.org/ontologies/sinso#Scale1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/sinso#Measurement2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/sinso#Measurement2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/sinso#Measurement"/>
+        <hasScale rdf:resource="http://www.semanticweb.org/ontologies/sinso#Scale2"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/sinso#Measurement3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/sinso#Measurement3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/sinso#Measurement"/>
+        <hasScale rdf:resource="http://www.semanticweb.org/ontologies/sinso#Scale3"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/sinso#Measurement4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/sinso#Measurement4">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/sinso#Measurement"/>
+        <hasScale rdf:resource="http://www.semanticweb.org/ontologies/sinso#Scale4"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/sinso#Measurement5 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/sinso#Measurement5">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/sinso#Measurement"/>
+        <hasScale rdf:resource="http://www.semanticweb.org/ontologies/sinso#Scale5"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/sinso#Modifiability1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/sinso#Modifiability1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/sinso#Modifiability"/>
+        <contributesTo rdf:resource="http://www.semanticweb.org/ontologies/sinso#Evolvability1"/>
+        <hasImpact rdf:resource="http://www.semanticweb.org/ontologies/sinso#Maintenance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/sinso#Modularity1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/sinso#Modularity1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/sinso#Modularity"/>
+        <hasImpact rdf:resource="http://www.semanticweb.org/ontologies/sinso#Longevity"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/sinso#Objective1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/sinso#Objective1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/sinso#Objective"/>
+        <hasIndicator rdf:resource="http://www.semanticweb.org/ontologies/sinso#Indicator1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/sinso#Objective2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/sinso#Objective2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/sinso#Objective"/>
+        <hasIndicator rdf:resource="http://www.semanticweb.org/ontologies/sinso#Indicator2"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/sinso#Objective3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/sinso#Objective3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/sinso#Objective"/>
+        <hasIndicator rdf:resource="http://www.semanticweb.org/ontologies/sinso#Indicator3"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/sinso#Objective4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/sinso#Objective4">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/sinso#Objective"/>
+        <hasIndicator rdf:resource="http://www.semanticweb.org/ontologies/sinso#Indicator4"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/sinso#Obsolescence -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/sinso#Obsolescence">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/sinso#Technical"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/sinso#OccupationalHealth -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/sinso#OccupationalHealth">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/sinso#Social"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/sinso#Operability1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/sinso#Operability1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/sinso#Operability"/>
+        <hasImpact rdf:resource="http://www.semanticweb.org/ontologies/sinso#Accesability"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/sinso#PreventionOfCorruption -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/sinso#PreventionOfCorruption">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/sinso#Social"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/sinso#Profitability -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/sinso#Profitability">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/sinso#Economical"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/sinso#QA1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/sinso#QA1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/sinso#QualityAttribute"/>
+        <hasObjective rdf:resource="http://www.semanticweb.org/ontologies/sinso#Objective1"/>
+        <isComposedOf rdf:resource="http://www.semanticweb.org/ontologies/sinso#Modifiability1"/>
+        <specifiedFor rdf:resource="http://www.semanticweb.org/ontologies/sinso#domain1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/sinso#QA2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/sinso#QA2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/sinso#QualityAttribute"/>
+        <hasObjective rdf:resource="http://www.semanticweb.org/ontologies/sinso#Objective2"/>
+        <involves rdf:resource="http://www.semanticweb.org/ontologies/sinso#Integrity1"/>
+        <specifiedFor rdf:resource="http://www.semanticweb.org/ontologies/sinso#domain1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/sinso#QA3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/sinso#QA3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/sinso#QualityAttribute"/>
+        <hasObjective rdf:resource="http://www.semanticweb.org/ontologies/sinso#Objective3"/>
+        <isComposedOf rdf:resource="http://www.semanticweb.org/ontologies/sinso#Modularity1"/>
+        <specifiedFor rdf:resource="http://www.semanticweb.org/ontologies/sinso#domain1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/sinso#QA4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/sinso#QA4">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/sinso#QualityAttribute"/>
+        <hasObjective rdf:resource="http://www.semanticweb.org/ontologies/sinso#Objective4"/>
+        <involves rdf:resource="http://www.semanticweb.org/ontologies/sinso#Operability1"/>
+        <specifiedFor rdf:resource="http://www.semanticweb.org/ontologies/sinso#domain1"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/sinso#QA5 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/sinso#QA5">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/sinso#QualityAttribute"/>
+        <specifiedFor rdf:resource="http://www.semanticweb.org/ontologies/sinso#domain2"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/sinso#RenewableEnergy -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/sinso#RenewableEnergy">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/sinso#Environmental"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/sinso#RespectHumanRights -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/sinso#RespectHumanRights">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/sinso#Social"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/sinso#Scale1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/sinso#Scale1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/sinso#Scale"/>
+        <belongsTo rdf:resource="http://www.semanticweb.org/ontologies/sinso#TypeOfScale1"/>
+        <identifierScale rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IDScale1</identifierScale>
+        <value rdf:datatype="http://www.w3.org/2001/XMLSchema#int">5</value>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/sinso#Scale2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/sinso#Scale2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/sinso#Scale"/>
+        <belongsTo rdf:resource="http://www.semanticweb.org/ontologies/sinso#TypeOfScale1"/>
+        <value rdf:datatype="http://www.w3.org/2001/XMLSchema#int">3</value>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/sinso#Scale3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/sinso#Scale3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/sinso#Scale"/>
+        <belongsTo rdf:resource="http://www.semanticweb.org/ontologies/sinso#TypeOfScale1"/>
+        <value rdf:datatype="http://www.w3.org/2001/XMLSchema#int">2</value>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/sinso#Scale4 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/sinso#Scale4">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/sinso#Scale"/>
+        <belongsTo rdf:resource="http://www.semanticweb.org/ontologies/sinso#TypeOfScale1"/>
+        <value rdf:datatype="http://www.w3.org/2001/XMLSchema#int">4</value>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/sinso#Scale5 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/sinso#Scale5">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/sinso#Scale"/>
+        <belongsTo rdf:resource="http://www.semanticweb.org/ontologies/sinso#TypeOfScale1"/>
+        <value rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">5</value>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/sinso#Scale6 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/sinso#Scale6">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/sinso#Scale"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/sinso#Scale7 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/sinso#Scale7">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/sinso#Scale"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/sinso#Skills -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/sinso#Skills">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/sinso#Individual-Personel"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/sinso#TypeOfScale1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/sinso#TypeOfScale1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/sinso#TypeOfScale"/>
+        <nameTypeOfScale rdf:datatype="http://www.w3.org/2001/XMLSchema#string">LikertScale - Five Levels - From 1 to 5</nameTypeOfScale>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/sinso#WaterResources -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/sinso#WaterResources">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/sinso#Environmental"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/sinso#Well-being -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/sinso#Well-being">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/sinso#Individual-Personel"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/sinso#domain1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/sinso#domain1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/sinso#Domain"/>
+        <hasQAS rdf:resource="http://www.semanticweb.org/ontologies/sinso#QA1"/>
+        <hasQAS rdf:resource="http://www.semanticweb.org/ontologies/sinso#QA2"/>
+        <hasQAS rdf:resource="http://www.semanticweb.org/ontologies/sinso#QA3"/>
+        <hasQAS rdf:resource="http://www.semanticweb.org/ontologies/sinso#QA4"/>
+        <identifier>domain1</identifier>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/sinso#domain2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/sinso#domain2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/sinso#Domain"/>
+        <hasQAS rdf:resource="http://www.semanticweb.org/ontologies/sinso#QA5"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/ontologies/sinso#domain3 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/sinso#domain3">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/sinso#Domain"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // General axioms
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/sinso#Accountability"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/sinso#Authenticity"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/sinso#Confidentiality"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/sinso#Integrity"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/sinso#Analysability"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/sinso#Modifiability"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/sinso#Modularity"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/sinso#Reusability"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/sinso#Testability"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/sinso#AppropriatenessRecognizability"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/sinso#Learnability"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/sinso#Operability"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/sinso#UserErrorProtection"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/sinso#Capacity"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/sinso#ResourceUtilization"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/sinso#TimeBehaviour"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointClasses"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/sinso#Economical"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/sinso#Environmental"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/sinso#Individual-Personel"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/sinso#Social"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/sinso#Technical"/>
+        </owl:members>
+    </rdf:Description>
+    <rdf:Description>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AllDisjointProperties"/>
+        <owl:members rdf:parseType="Collection">
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/sinso#description"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/sinso#identifier"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/sinso#identifierIndicator"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/sinso#identifierMeasure"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/sinso#identifierMeasurement"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/sinso#identifierObjective"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/sinso#identifierScale"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/sinso#identifierTypeOfScale"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/sinso#name"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/sinso#nameIndicator"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/sinso#nameMeasure"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/sinso#nameMeasurement"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/sinso#nameObjective"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/sinso#nameScale"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/sinso#nameTypeOfScale"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/sinso#objective"/>
+            <rdf:Description rdf:about="http://www.semanticweb.org/ontologies/sinso#value"/>
+        </owl:members>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

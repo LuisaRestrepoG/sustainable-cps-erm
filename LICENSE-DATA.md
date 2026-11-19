@@ -9,7 +9,8 @@ This applies to:
 - `model/data/` (synthetic patient data) and `model/results/`
 - `experiments/results/` (raw and aggregated measurements)
 - `focus_group/items.csv` and `focus_group/responses_anonymized.csv`
-- `ontology/` (lab-case instantiation of SinSO)
+- `ontology/SinSO_ERM-HS1.owl` and `ontology/cq_results.md` (lab-case instantiation of SinSO)
+- `ontology/SINSO.owl` is a copy of the SinSO ontology published in Mendeley Data under CC BY 4.0 (see below)
 
 The SinSO ontology itself is published separately in Mendeley Data under CC BY 4.0
 (https://doi.org/10.17632/ygv49pb4dx.2).

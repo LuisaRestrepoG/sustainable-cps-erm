@@ -1,0 +1,466 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rdf:RDF
+  xmlns:owl="http://www.w3.org/2002/07/owl#"
+  xmlns:sinso="http://www.semanticweb.org/ontologies/sinso#"
+  xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+  xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+>
+  <owl:Ontology rdf:about="http://www.semanticweb.org/ontologies/sinso/erm-hs1">
+    <owl:imports rdf:resource="http://www.semanticweb.org/ontologies/sinso"/>
+    <rdfs:comment>Instantiation of SinSO for the ERM-HS1 lab case (Emergency Response Microservice for stage 1 hypertension patients in a smart home for seniors). Companion artifact of the paper 'Towards Sustainable Cyber-Physical Systems: An Adaptation-Centric Architectural Framework and a Lab Case for Healthcare Environments'.</rdfs:comment>
+    <owl:versionInfo>1.0.0</owl:versionInfo>
+  </owl:Ontology>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/sinso/erm-hs1#Measurement_RecoveryTime">
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/sinso#Measurement"/>
+    <sinso:identifierMeasurement>RecoveryTime</sinso:identifierMeasurement>
+    <sinso:nameMeasurement>Time from the crash to the last failed request (E3)</sinso:nameMeasurement>
+    <sinso:hasScale>
+      <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/sinso/erm-hs1#Scale_Seconds">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/sinso#Scale"/>
+        <sinso:belongsTo rdf:resource="http://www.semanticweb.org/ontologies/sinso/erm-hs1#Type_Seconds"/>
+        <sinso:identifierScale>IDSeconds</sinso:identifierScale>
+        <sinso:nameScale>Ratio scale - seconds</sinso:nameScale>
+      </owl:NamedIndividual>
+    </sinso:hasScale>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/sinso/erm-hs1#QA_Reliability">
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/sinso#QualityAttribute"/>
+    <rdfs:label xml:lang="en">Reliability</rdfs:label>
+    <sinso:specifiedFor>
+      <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/sinso/erm-hs1#ERM_HS1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/sinso#Domain"/>
+        <rdfs:label xml:lang="en">ERM-HS1 lab case</rdfs:label>
+        <sinso:identifier>ERM-HS1</sinso:identifier>
+        <sinso:name>Emergency Response Microservice for stage 1 hypertension patients (smart home for seniors)</sinso:name>
+        <sinso:objective>Detect critical blood pressure readings and plan emergency responses or treatment-adjustment recommendations, while sustaining the quality attributes of the framework.</sinso:objective>
+        <sinso:hasQAS rdf:resource="http://www.semanticweb.org/ontologies/sinso/erm-hs1#QA_Performance"/>
+        <sinso:hasQAS rdf:resource="http://www.semanticweb.org/ontologies/sinso/erm-hs1#QA_Scalability"/>
+        <sinso:hasQAS rdf:resource="http://www.semanticweb.org/ontologies/sinso/erm-hs1#QA_EnergyEfficiency"/>
+        <sinso:hasQAS rdf:resource="http://www.semanticweb.org/ontologies/sinso/erm-hs1#QA_Reliability"/>
+        <sinso:hasQAS rdf:resource="http://www.semanticweb.org/ontologies/sinso/erm-hs1#QA_Security"/>
+        <sinso:hasQAS rdf:resource="http://www.semanticweb.org/ontologies/sinso/erm-hs1#QA_Maintainability"/>
+        <sinso:hasQAS rdf:resource="http://www.semanticweb.org/ontologies/sinso/erm-hs1#QA_Adaptability"/>
+        <sinso:hasQAS rdf:resource="http://www.semanticweb.org/ontologies/sinso/erm-hs1#QA_Interoperability"/>
+      </owl:NamedIndividual>
+    </sinso:specifiedFor>
+    <sinso:isComposedOf>
+      <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/sinso/erm-hs1#Reliability_ERM">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/sinso#Reliability"/>
+        <rdfs:label xml:lang="en">Reliability of ERM-HS1</rdfs:label>
+        <sinso:hasImpact rdf:resource="http://www.semanticweb.org/ontologies/sinso#Maintenance"/>
+        <sinso:hasImpact rdf:resource="http://www.semanticweb.org/ontologies/sinso#Accesability"/>
+        <sinso:hasImpact rdf:resource="http://www.semanticweb.org/ontologies/sinso#Well-being"/>
+      </owl:NamedIndividual>
+    </sinso:isComposedOf>
+    <sinso:isRelatedTo rdf:resource="http://www.semanticweb.org/ontologies/sinso#Maintenance"/>
+    <sinso:isRelatedTo rdf:resource="http://www.semanticweb.org/ontologies/sinso#Accesability"/>
+    <sinso:isRelatedTo rdf:resource="http://www.semanticweb.org/ontologies/sinso#Well-being"/>
+    <sinso:hasObjective>
+      <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/sinso/erm-hs1#Objective_Reliability">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/sinso#Objective"/>
+        <sinso:identifierObjective>OBJ4</sinso:identifierObjective>
+        <sinso:nameObjective>Lose no emergency request and recover in less than 5 s when an ERM instance crashes</sinso:nameObjective>
+        <sinso:hasIndicator rdf:resource="http://www.semanticweb.org/ontologies/sinso/erm-hs1#Indicator_Reliability"/>
+      </owl:NamedIndividual>
+    </sinso:hasObjective>
+    <sinso:shouldHas>
+      <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/sinso/erm-hs1#Maintainability_ERM">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/sinso#Modularity"/>
+        <rdfs:label xml:lang="en">Maintainability of ERM-HS1</rdfs:label>
+        <sinso:hasImpact rdf:resource="http://www.semanticweb.org/ontologies/sinso#Longevity"/>
+        <sinso:hasImpact rdf:resource="http://www.semanticweb.org/ontologies/sinso#Maintenance"/>
+        <sinso:hasImpact rdf:resource="http://www.semanticweb.org/ontologies/sinso#Investment"/>
+      </owl:NamedIndividual>
+    </sinso:shouldHas>
+    <sinso:shouldHas>
+      <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/sinso/erm-hs1#Scalability_ERM">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/sinso#Scalability"/>
+        <rdfs:label xml:lang="en">Scalability of ERM-HS1</rdfs:label>
+        <sinso:hasImpact rdf:resource="http://www.semanticweb.org/ontologies/sinso#Longevity"/>
+        <sinso:hasImpact rdf:resource="http://www.semanticweb.org/ontologies/sinso#Investment"/>
+      </owl:NamedIndividual>
+    </sinso:shouldHas>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/sinso/erm-hs1#QA_EnergyEfficiency">
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/sinso#QualityAttribute"/>
+    <rdfs:label xml:lang="en">EnergyEfficiency</rdfs:label>
+    <sinso:specifiedFor rdf:resource="http://www.semanticweb.org/ontologies/sinso/erm-hs1#ERM_HS1"/>
+    <sinso:isComposedOf>
+      <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/sinso/erm-hs1#EnergyEfficiency_ERM">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/sinso#EnergyEfficiency"/>
+        <rdfs:label xml:lang="en">EnergyEfficiency of ERM-HS1</rdfs:label>
+        <sinso:hasImpact rdf:resource="http://www.semanticweb.org/ontologies/sinso#EnergyResources"/>
+        <sinso:hasImpact rdf:resource="http://www.semanticweb.org/ontologies/sinso#ClimateChange"/>
+      </owl:NamedIndividual>
+    </sinso:isComposedOf>
+    <sinso:isRelatedTo rdf:resource="http://www.semanticweb.org/ontologies/sinso#EnergyResources"/>
+    <sinso:isRelatedTo rdf:resource="http://www.semanticweb.org/ontologies/sinso#ClimateChange"/>
+    <sinso:hasObjective>
+      <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/sinso/erm-hs1#Objective_EnergyEfficiency">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/sinso#Objective"/>
+        <sinso:identifierObjective>OBJ3</sinso:identifierObjective>
+        <sinso:nameObjective>Avoid redundant computation and transmission when monitoring patients</sinso:nameObjective>
+        <sinso:hasIndicator rdf:resource="http://www.semanticweb.org/ontologies/sinso/erm-hs1#Indicator_EnergyEfficiency"/>
+      </owl:NamedIndividual>
+    </sinso:hasObjective>
+    <sinso:shouldHas rdf:resource="http://www.semanticweb.org/ontologies/sinso/erm-hs1#Maintainability_ERM"/>
+    <sinso:shouldHas rdf:resource="http://www.semanticweb.org/ontologies/sinso/erm-hs1#Scalability_ERM"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/sinso/erm-hs1#Measure_Maintainability_1">
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/sinso#Measure"/>
+    <sinso:identifierMeasure>MEA6.1</sinso:identifierMeasure>
+    <sinso:nameMeasure>Expert rating 4.38 / 5 (design review)</sinso:nameMeasure>
+    <sinso:uses>
+      <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/sinso/erm-hs1#Measurement_ExpertRating">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/sinso#Measurement"/>
+        <sinso:identifierMeasurement>ExpertRating</sinso:identifierMeasurement>
+        <sinso:nameMeasurement>Expert evaluation, mean agreement of four experts (Likert 1-5)</sinso:nameMeasurement>
+        <sinso:hasScale rdf:resource="http://www.semanticweb.org/ontologies/sinso#Scale1"/>
+      </owl:NamedIndividual>
+    </sinso:uses>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/sinso/erm-hs1#Measure_Interoperability_1">
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/sinso#Measure"/>
+    <sinso:identifierMeasure>MEA8.1</sinso:identifierMeasure>
+    <sinso:nameMeasure>Expert rating 4.25 / 5 (design review; FHIR adapter not implemented)</sinso:nameMeasure>
+    <sinso:uses rdf:resource="http://www.semanticweb.org/ontologies/sinso/erm-hs1#Measurement_ExpertRating"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/sinso/erm-hs1#Measurement_LoadLatency">
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/sinso#Measurement"/>
+    <sinso:identifierMeasurement>LoadLatency</sinso:identifierMeasurement>
+    <sinso:nameMeasurement>Load generator on the Docker prototype; per-request latency, 5 runs x 30 s (experiments E1/E4)</sinso:nameMeasurement>
+    <sinso:hasScale>
+      <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/sinso/erm-hs1#Scale_Milliseconds">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/sinso#Scale"/>
+        <sinso:belongsTo rdf:resource="http://www.semanticweb.org/ontologies/sinso/erm-hs1#Type_Milliseconds"/>
+        <sinso:identifierScale>IDMilliseconds</sinso:identifierScale>
+        <sinso:nameScale>Ratio scale - milliseconds</sinso:nameScale>
+      </owl:NamedIndividual>
+    </sinso:hasScale>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/sinso/erm-hs1#Scale_Percentage">
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/sinso#Scale"/>
+    <sinso:belongsTo>
+      <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/sinso/erm-hs1#Type_Percentage">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/sinso#TypeOfScale"/>
+        <sinso:nameTypeOfScale>Ratio scale - percentage (0-100)</sinso:nameTypeOfScale>
+      </owl:NamedIndividual>
+    </sinso:belongsTo>
+    <sinso:identifierScale>IDPercentage</sinso:identifierScale>
+    <sinso:nameScale>Ratio scale - percentage (0-100)</sinso:nameScale>
+    <sinso:value rdf:datatype="http://www.w3.org/2001/XMLSchema#int">100</sinso:value>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/sinso/erm-hs1#Performance_ERM">
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/sinso#TimeBehaviour"/>
+    <rdfs:label xml:lang="en">Performance of ERM-HS1</rdfs:label>
+    <sinso:hasImpact rdf:resource="http://www.semanticweb.org/ontologies/sinso#Longevity"/>
+    <sinso:hasImpact rdf:resource="http://www.semanticweb.org/ontologies/sinso#Profitability"/>
+    <sinso:hasImpact rdf:resource="http://www.semanticweb.org/ontologies/sinso#CustomerSatisfaction"/>
+    <sinso:hasImpact rdf:resource="http://www.semanticweb.org/ontologies/sinso#Well-being"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/sinso/erm-hs1#Measurement_LoadThroughput">
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/sinso#Measurement"/>
+    <sinso:identifierMeasurement>LoadThroughput</sinso:identifierMeasurement>
+    <sinso:nameMeasurement>Load generator on the Docker prototype; completed requests per second, 5 runs x 30 s (E1/E4)</sinso:nameMeasurement>
+    <sinso:hasScale>
+      <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/sinso/erm-hs1#Scale_RequestsPerSecond">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/sinso#Scale"/>
+        <sinso:belongsTo rdf:resource="http://www.semanticweb.org/ontologies/sinso/erm-hs1#Type_RequestsPerSecond"/>
+        <sinso:identifierScale>IDRequestsPerSecond</sinso:identifierScale>
+        <sinso:nameScale>Ratio scale - requests per second</sinso:nameScale>
+      </owl:NamedIndividual>
+    </sinso:hasScale>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/sinso/erm-hs1#Indicator_EnergyEfficiency">
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/sinso#Indicator"/>
+    <sinso:identifierIndicator>IND3</sinso:identifierIndicator>
+    <sinso:nameIndicator>CPU time and network bytes per request with client-side caching</sinso:nameIndicator>
+    <sinso:obtains>
+      <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/sinso/erm-hs1#Measure_EnergyEfficiency_1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/sinso#Measure"/>
+        <sinso:identifierMeasure>MEA3.1</sinso:identifierMeasure>
+        <sinso:nameMeasure>CPU time per request -35% with cache (E2)</sinso:nameMeasure>
+        <sinso:uses rdf:resource="http://www.semanticweb.org/ontologies/sinso/erm-hs1#Measurement_CgroupCPU"/>
+      </owl:NamedIndividual>
+    </sinso:obtains>
+    <sinso:obtains>
+      <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/sinso/erm-hs1#Measure_EnergyEfficiency_2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/sinso#Measure"/>
+        <sinso:identifierMeasure>MEA3.2</sinso:identifierMeasure>
+        <sinso:nameMeasure>Network bytes per request -22% with cache (E2)</sinso:nameMeasure>
+        <sinso:uses rdf:resource="http://www.semanticweb.org/ontologies/sinso/erm-hs1#Measurement_NetBytes"/>
+      </owl:NamedIndividual>
+    </sinso:obtains>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/sinso/erm-hs1#Type_Seconds">
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/sinso#TypeOfScale"/>
+    <sinso:nameTypeOfScale>Ratio scale - seconds</sinso:nameTypeOfScale>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/sinso/erm-hs1#QA_Adaptability">
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/sinso#QualityAttribute"/>
+    <rdfs:label xml:lang="en">Adaptability</rdfs:label>
+    <sinso:specifiedFor rdf:resource="http://www.semanticweb.org/ontologies/sinso/erm-hs1#ERM_HS1"/>
+    <sinso:isComposedOf>
+      <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/sinso/erm-hs1#Adaptability_ERM">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/sinso#Adaptability"/>
+        <rdfs:label xml:lang="en">Adaptability of ERM-HS1</rdfs:label>
+        <sinso:hasImpact rdf:resource="http://www.semanticweb.org/ontologies/sinso#Innovation"/>
+        <sinso:hasImpact rdf:resource="http://www.semanticweb.org/ontologies/sinso#Investment"/>
+      </owl:NamedIndividual>
+    </sinso:isComposedOf>
+    <sinso:isRelatedTo rdf:resource="http://www.semanticweb.org/ontologies/sinso#Innovation"/>
+    <sinso:isRelatedTo rdf:resource="http://www.semanticweb.org/ontologies/sinso#Investment"/>
+    <sinso:hasObjective>
+      <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/sinso/erm-hs1#Objective_Adaptability">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/sinso#Objective"/>
+        <sinso:identifierObjective>OBJ7</sinso:identifierObjective>
+        <sinso:nameObjective>Adapt the deployment and the plans to load and patient state through the per-microservice MAPE-K loop</sinso:nameObjective>
+        <sinso:hasIndicator rdf:resource="http://www.semanticweb.org/ontologies/sinso/erm-hs1#Indicator_Adaptability"/>
+      </owl:NamedIndividual>
+    </sinso:hasObjective>
+    <sinso:shouldHas rdf:resource="http://www.semanticweb.org/ontologies/sinso/erm-hs1#Maintainability_ERM"/>
+    <sinso:shouldHas rdf:resource="http://www.semanticweb.org/ontologies/sinso/erm-hs1#Scalability_ERM"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/sinso/erm-hs1#Measure_Adaptability_2">
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/sinso#Measure"/>
+    <sinso:identifierMeasure>MEA7.2</sinso:identifierMeasure>
+    <sinso:nameMeasure>Expert rating 4.12 / 5</sinso:nameMeasure>
+    <sinso:uses rdf:resource="http://www.semanticweb.org/ontologies/sinso/erm-hs1#Measurement_ExpertRating"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/sinso/erm-hs1#QA_Performance">
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/sinso#QualityAttribute"/>
+    <rdfs:label xml:lang="en">Performance</rdfs:label>
+    <sinso:specifiedFor rdf:resource="http://www.semanticweb.org/ontologies/sinso/erm-hs1#ERM_HS1"/>
+    <sinso:isComposedOf rdf:resource="http://www.semanticweb.org/ontologies/sinso/erm-hs1#Performance_ERM"/>
+    <sinso:isRelatedTo rdf:resource="http://www.semanticweb.org/ontologies/sinso#Longevity"/>
+    <sinso:isRelatedTo rdf:resource="http://www.semanticweb.org/ontologies/sinso#Profitability"/>
+    <sinso:isRelatedTo rdf:resource="http://www.semanticweb.org/ontologies/sinso#CustomerSatisfaction"/>
+    <sinso:isRelatedTo rdf:resource="http://www.semanticweb.org/ontologies/sinso#Well-being"/>
+    <sinso:hasObjective>
+      <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/sinso/erm-hs1#Objective_Performance">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/sinso#Objective"/>
+        <sinso:identifierObjective>OBJ1</sinso:identifierObjective>
+        <sinso:nameObjective>Serve every reading with a p95 latency below 1 s under normal load (up to 50 devices)</sinso:nameObjective>
+        <sinso:hasIndicator rdf:resource="http://www.semanticweb.org/ontologies/sinso/erm-hs1#Indicator_Performance"/>
+      </owl:NamedIndividual>
+    </sinso:hasObjective>
+    <sinso:shouldHas rdf:resource="http://www.semanticweb.org/ontologies/sinso/erm-hs1#Maintainability_ERM"/>
+    <sinso:shouldHas rdf:resource="http://www.semanticweb.org/ontologies/sinso/erm-hs1#Scalability_ERM"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/sinso/erm-hs1#Indicator_Reliability">
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/sinso#Indicator"/>
+    <sinso:identifierIndicator>IND4</sinso:identifierIndicator>
+    <sinso:nameIndicator>Failed requests and recovery time after a crash</sinso:nameIndicator>
+    <sinso:obtains>
+      <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/sinso/erm-hs1#Measure_Reliability_1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/sinso#Measure"/>
+        <sinso:identifierMeasure>MEA4.1</sinso:identifierMeasure>
+        <sinso:nameMeasure>One replica: 12 failed requests, 4.2 s recovery (E3)</sinso:nameMeasure>
+        <sinso:uses rdf:resource="http://www.semanticweb.org/ontologies/sinso/erm-hs1#Measurement_FailedRequests"/>
+      </owl:NamedIndividual>
+    </sinso:obtains>
+    <sinso:obtains>
+      <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/sinso/erm-hs1#Measure_Reliability_2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/sinso#Measure"/>
+        <sinso:identifierMeasure>MEA4.2</sinso:identifierMeasure>
+        <sinso:nameMeasure>Two replicas: 0 failed requests in 4 of 5 runs (E3)</sinso:nameMeasure>
+        <sinso:uses rdf:resource="http://www.semanticweb.org/ontologies/sinso/erm-hs1#Measurement_FailedRequests"/>
+      </owl:NamedIndividual>
+    </sinso:obtains>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/sinso/erm-hs1#Indicator_Performance">
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/sinso#Indicator"/>
+    <sinso:identifierIndicator>IND1</sinso:identifierIndicator>
+    <sinso:nameIndicator>p95 end-to-end latency (ms)</sinso:nameIndicator>
+    <sinso:obtains>
+      <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/sinso/erm-hs1#Measure_Performance_1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/sinso#Measure"/>
+        <sinso:identifierMeasure>MEA1.1</sinso:identifierMeasure>
+        <sinso:nameMeasure>p95 latency 38-58 ms with 10-50 devices (E1): objective met</sinso:nameMeasure>
+        <sinso:uses rdf:resource="http://www.semanticweb.org/ontologies/sinso/erm-hs1#Measurement_LoadLatency"/>
+      </owl:NamedIndividual>
+    </sinso:obtains>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/sinso/erm-hs1#Objective_Security">
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/sinso#Objective"/>
+    <sinso:identifierObjective>OBJ5</sinso:identifierObjective>
+    <sinso:nameObjective>Reject and log 100% of unauthenticated attempts to modify treatment goals</sinso:nameObjective>
+    <sinso:hasIndicator>
+      <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/sinso/erm-hs1#Indicator_Security">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/sinso#Indicator"/>
+        <sinso:identifierIndicator>IND5</sinso:identifierIndicator>
+        <sinso:nameIndicator>Percentage of unauthorized requests rejected</sinso:nameIndicator>
+        <sinso:obtains rdf:resource="http://www.semanticweb.org/ontologies/sinso/erm-hs1#Measure_Security_1"/>
+      </owl:NamedIndividual>
+    </sinso:hasIndicator>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/sinso/erm-hs1#Measurement_FailedRequests">
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/sinso#Measurement"/>
+    <sinso:identifierMeasurement>FailedRequests</sinso:identifierMeasurement>
+    <sinso:nameMeasurement>Failed requests after crashing the ERM instance (E3)</sinso:nameMeasurement>
+    <sinso:hasScale>
+      <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/sinso/erm-hs1#Scale_Count">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/sinso#Scale"/>
+        <sinso:belongsTo rdf:resource="http://www.semanticweb.org/ontologies/sinso/erm-hs1#Type_Count"/>
+        <sinso:identifierScale>IDCount</sinso:identifierScale>
+        <sinso:nameScale>Absolute scale - count</sinso:nameScale>
+      </owl:NamedIndividual>
+    </sinso:hasScale>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/sinso/erm-hs1#Measurement_CgroupCPU">
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/sinso#Measurement"/>
+    <sinso:identifierMeasurement>CgroupCPU</sinso:identifierMeasurement>
+    <sinso:nameMeasurement>CPU time per request from cgroup v2 cpu.stat, relative change with vs. without cache (E2)</sinso:nameMeasurement>
+    <sinso:hasScale rdf:resource="http://www.semanticweb.org/ontologies/sinso/erm-hs1#Scale_Percentage"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/sinso/erm-hs1#QA_Interoperability">
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/sinso#QualityAttribute"/>
+    <rdfs:label xml:lang="en">Interoperability</rdfs:label>
+    <sinso:specifiedFor rdf:resource="http://www.semanticweb.org/ontologies/sinso/erm-hs1#ERM_HS1"/>
+    <sinso:isComposedOf>
+      <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/sinso/erm-hs1#Interoperability_ERM">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/sinso#Interoperability"/>
+        <rdfs:label xml:lang="en">Interoperability of ERM-HS1</rdfs:label>
+        <sinso:hasImpact rdf:resource="http://www.semanticweb.org/ontologies/sinso#Accesability"/>
+        <sinso:hasImpact rdf:resource="http://www.semanticweb.org/ontologies/sinso#Innovation"/>
+      </owl:NamedIndividual>
+    </sinso:isComposedOf>
+    <sinso:isRelatedTo rdf:resource="http://www.semanticweb.org/ontologies/sinso#Accesability"/>
+    <sinso:isRelatedTo rdf:resource="http://www.semanticweb.org/ontologies/sinso#Innovation"/>
+    <sinso:hasObjective>
+      <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/sinso/erm-hs1#Objective_Interoperability">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/sinso#Objective"/>
+        <sinso:identifierObjective>OBJ8</sinso:identifierObjective>
+        <sinso:nameObjective>Deliver patient observations to health information systems as HL7 FHIR R4 resources</sinso:nameObjective>
+        <sinso:hasIndicator rdf:resource="http://www.semanticweb.org/ontologies/sinso/erm-hs1#Indicator_Interoperability"/>
+      </owl:NamedIndividual>
+    </sinso:hasObjective>
+    <sinso:shouldHas rdf:resource="http://www.semanticweb.org/ontologies/sinso/erm-hs1#Maintainability_ERM"/>
+    <sinso:shouldHas rdf:resource="http://www.semanticweb.org/ontologies/sinso/erm-hs1#Scalability_ERM"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/sinso/erm-hs1#Objective_Maintainability">
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/sinso#Objective"/>
+    <sinso:identifierObjective>OBJ6</sinso:identifierObjective>
+    <sinso:nameObjective>Redeploy only the affected microservice when the estimation model changes</sinso:nameObjective>
+    <sinso:hasIndicator>
+      <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/sinso/erm-hs1#Indicator_Maintainability">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/sinso#Indicator"/>
+        <sinso:identifierIndicator>IND6</sinso:identifierIndicator>
+        <sinso:nameIndicator>Number of services redeployed per change</sinso:nameIndicator>
+        <sinso:obtains rdf:resource="http://www.semanticweb.org/ontologies/sinso/erm-hs1#Measure_Maintainability_1"/>
+      </owl:NamedIndividual>
+    </sinso:hasIndicator>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/sinso/erm-hs1#QA_Maintainability">
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/sinso#QualityAttribute"/>
+    <rdfs:label xml:lang="en">Maintainability</rdfs:label>
+    <sinso:specifiedFor rdf:resource="http://www.semanticweb.org/ontologies/sinso/erm-hs1#ERM_HS1"/>
+    <sinso:isComposedOf rdf:resource="http://www.semanticweb.org/ontologies/sinso/erm-hs1#Maintainability_ERM"/>
+    <sinso:isRelatedTo rdf:resource="http://www.semanticweb.org/ontologies/sinso#Longevity"/>
+    <sinso:isRelatedTo rdf:resource="http://www.semanticweb.org/ontologies/sinso#Maintenance"/>
+    <sinso:isRelatedTo rdf:resource="http://www.semanticweb.org/ontologies/sinso#Investment"/>
+    <sinso:hasObjective rdf:resource="http://www.semanticweb.org/ontologies/sinso/erm-hs1#Objective_Maintainability"/>
+    <sinso:shouldHas rdf:resource="http://www.semanticweb.org/ontologies/sinso/erm-hs1#Maintainability_ERM"/>
+    <sinso:shouldHas rdf:resource="http://www.semanticweb.org/ontologies/sinso/erm-hs1#Scalability_ERM"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/sinso/erm-hs1#Measurement_NetBytes">
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/sinso#Measurement"/>
+    <sinso:identifierMeasurement>NetBytes</sinso:identifierMeasurement>
+    <sinso:nameMeasurement>Network bytes per request from /sys/class/net counters, relative change with vs. without cache (E2)</sinso:nameMeasurement>
+    <sinso:hasScale rdf:resource="http://www.semanticweb.org/ontologies/sinso/erm-hs1#Scale_Percentage"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/sinso/erm-hs1#QA_Security">
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/sinso#QualityAttribute"/>
+    <rdfs:label xml:lang="en">Security</rdfs:label>
+    <sinso:specifiedFor rdf:resource="http://www.semanticweb.org/ontologies/sinso/erm-hs1#ERM_HS1"/>
+    <sinso:isComposedOf>
+      <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/sinso/erm-hs1#Security_ERM">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/sinso#Confidentiality"/>
+        <rdfs:label xml:lang="en">Security of ERM-HS1</rdfs:label>
+        <sinso:hasImpact rdf:resource="http://www.semanticweb.org/ontologies/sinso#RespectHumanRights"/>
+        <sinso:hasImpact rdf:resource="http://www.semanticweb.org/ontologies/sinso#Well-being"/>
+      </owl:NamedIndividual>
+    </sinso:isComposedOf>
+    <sinso:isRelatedTo rdf:resource="http://www.semanticweb.org/ontologies/sinso#RespectHumanRights"/>
+    <sinso:isRelatedTo rdf:resource="http://www.semanticweb.org/ontologies/sinso#Well-being"/>
+    <sinso:hasObjective rdf:resource="http://www.semanticweb.org/ontologies/sinso/erm-hs1#Objective_Security"/>
+    <sinso:shouldHas rdf:resource="http://www.semanticweb.org/ontologies/sinso/erm-hs1#Maintainability_ERM"/>
+    <sinso:shouldHas rdf:resource="http://www.semanticweb.org/ontologies/sinso/erm-hs1#Scalability_ERM"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/sinso/erm-hs1#Indicator_Interoperability">
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/sinso#Indicator"/>
+    <sinso:identifierIndicator>IND8</sinso:identifierIndicator>
+    <sinso:nameIndicator>Percentage of exchanged resources that are valid FHIR R4</sinso:nameIndicator>
+    <sinso:obtains rdf:resource="http://www.semanticweb.org/ontologies/sinso/erm-hs1#Measure_Interoperability_1"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/sinso/erm-hs1#Measure_Scalability_1">
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/sinso#Measure"/>
+    <sinso:identifierMeasure>MEA2.1</sinso:identifierMeasure>
+    <sinso:nameMeasure>One ERM replica: 75 req/s and p50 971 ms at 100 devices (E1): not met</sinso:nameMeasure>
+    <sinso:uses rdf:resource="http://www.semanticweb.org/ontologies/sinso/erm-hs1#Measurement_LoadThroughput"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/sinso/erm-hs1#Indicator_Adaptability">
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/sinso#Indicator"/>
+    <sinso:identifierIndicator>IND7</sinso:identifierIndicator>
+    <sinso:nameIndicator>Capacity gained by adding an ERM replica; plans executed by the MAPE-K loop</sinso:nameIndicator>
+    <sinso:obtains>
+      <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/sinso/erm-hs1#Measure_Adaptability_1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/sinso#Measure"/>
+        <sinso:identifierMeasure>MEA7.1</sinso:identifierMeasure>
+        <sinso:nameMeasure>Throughput x2.2 at 200 devices with a second replica (E4)</sinso:nameMeasure>
+        <sinso:uses rdf:resource="http://www.semanticweb.org/ontologies/sinso/erm-hs1#Measurement_LoadThroughput"/>
+      </owl:NamedIndividual>
+    </sinso:obtains>
+    <sinso:obtains rdf:resource="http://www.semanticweb.org/ontologies/sinso/erm-hs1#Measure_Adaptability_2"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/sinso/erm-hs1#QA_Scalability">
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/sinso#QualityAttribute"/>
+    <rdfs:label xml:lang="en">Scalability</rdfs:label>
+    <sinso:specifiedFor rdf:resource="http://www.semanticweb.org/ontologies/sinso/erm-hs1#ERM_HS1"/>
+    <sinso:isComposedOf rdf:resource="http://www.semanticweb.org/ontologies/sinso/erm-hs1#Scalability_ERM"/>
+    <sinso:isRelatedTo rdf:resource="http://www.semanticweb.org/ontologies/sinso#Longevity"/>
+    <sinso:isRelatedTo rdf:resource="http://www.semanticweb.org/ontologies/sinso#Investment"/>
+    <sinso:hasObjective>
+      <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/sinso/erm-hs1#Objective_Scalability">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/sinso#Objective"/>
+        <sinso:identifierObjective>OBJ2</sinso:identifierObjective>
+        <sinso:nameObjective>Keep the median latency below 1 s and serve at least 90% of the offered load at 100-200 devices</sinso:nameObjective>
+        <sinso:hasIndicator rdf:resource="http://www.semanticweb.org/ontologies/sinso/erm-hs1#Indicator_Scalability"/>
+      </owl:NamedIndividual>
+    </sinso:hasObjective>
+    <sinso:shouldHas rdf:resource="http://www.semanticweb.org/ontologies/sinso/erm-hs1#Maintainability_ERM"/>
+    <sinso:shouldHas rdf:resource="http://www.semanticweb.org/ontologies/sinso/erm-hs1#Scalability_ERM"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/sinso/erm-hs1#Type_Milliseconds">
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/sinso#TypeOfScale"/>
+    <sinso:nameTypeOfScale>Ratio scale - milliseconds</sinso:nameTypeOfScale>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/sinso/erm-hs1#Measure_Security_1">
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/sinso#Measure"/>
+    <sinso:identifierMeasure>MEA5.1</sinso:identifierMeasure>
+    <sinso:nameMeasure>Expert rating 4.12 / 5 (design review; not measured on the prototype)</sinso:nameMeasure>
+    <sinso:uses rdf:resource="http://www.semanticweb.org/ontologies/sinso/erm-hs1#Measurement_ExpertRating"/>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/sinso/erm-hs1#Indicator_Scalability">
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/sinso#Indicator"/>
+    <sinso:identifierIndicator>IND2</sinso:identifierIndicator>
+    <sinso:nameIndicator>Throughput (req/s) and median latency (ms) under peak load</sinso:nameIndicator>
+    <sinso:obtains rdf:resource="http://www.semanticweb.org/ontologies/sinso/erm-hs1#Measure_Scalability_1"/>
+    <sinso:obtains>
+      <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/sinso/erm-hs1#Measure_Scalability_2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/sinso#Measure"/>
+        <sinso:identifierMeasure>MEA2.2</sinso:identifierMeasure>
+        <sinso:nameMeasure>Two ERM replicas: 93 req/s and p50 16 ms at 100 devices; 137 req/s at 200 devices (E4)</sinso:nameMeasure>
+        <sinso:uses rdf:resource="http://www.semanticweb.org/ontologies/sinso/erm-hs1#Measurement_LoadThroughput"/>
+      </owl:NamedIndividual>
+    </sinso:obtains>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/sinso/erm-hs1#Type_RequestsPerSecond">
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/sinso#TypeOfScale"/>
+    <sinso:nameTypeOfScale>Ratio scale - requests per second</sinso:nameTypeOfScale>
+  </owl:NamedIndividual>
+  <owl:NamedIndividual rdf:about="http://www.semanticweb.org/ontologies/sinso/erm-hs1#Type_Count">
+    <rdf:type rdf:resource="http://www.semanticweb.org/ontologies/sinso#TypeOfScale"/>
+    <sinso:nameTypeOfScale>Absolute scale - count</sinso:nameTypeOfScale>
+  </owl:NamedIndividual>
+</rdf:RDF>
