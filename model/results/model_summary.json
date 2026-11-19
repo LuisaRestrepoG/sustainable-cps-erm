@@ -1,0 +1,56 @@
+{
+  "features": [
+    "age",
+    "sex",
+    "weight_kg",
+    "heart_rate_bpm",
+    "temperature_c",
+    "medication_adherence_pct",
+    "sbp_baseline"
+  ],
+  "target": "sbp_3_months",
+  "n_records": 1000,
+  "n_train": 800,
+  "n_test": 200,
+  "seed": 42,
+  "sklearn": "1.9.1",
+  "python": "3.12.0",
+  "intercept": -10.2993,
+  "coefficients": {
+    "age": 0.1585,
+    "sex": 1.5905,
+    "weight_kg": 0.1882,
+    "heart_rate_bpm": 0.1053,
+    "temperature_c": -0.6756,
+    "medication_adherence_pct": -0.0913,
+    "sbp_baseline": 1.0107
+  },
+  "cases": {
+    "Case 1": {
+      "inputs": {
+        "age": 68,
+        "sex": 0,
+        "weight_kg": 65.0,
+        "heart_rate_bpm": 70,
+        "temperature_c": 36.6,
+        "medication_adherence_pct": 95,
+        "sbp_baseline": 139
+      },
+      "predicted_sbp_3_months": 127.2,
+      "decision": "On track: no intervention"
+    },
+    "Case 2": {
+      "inputs": {
+        "age": 82,
+        "sex": 1,
+        "weight_kg": 92.0,
+        "heart_rate_bpm": 88,
+        "temperature_c": 36.8,
+        "medication_adherence_pct": 30,
+        "sbp_baseline": 138
+      },
+      "predicted_sbp_3_months": 142.8,
+      "decision": "Goal not expected to be reached: send treatment-adjustment recommendation to clinician"
+    }
+  }
+}

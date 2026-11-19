@@ -1,0 +1,25 @@
+item,criterion,reverse_coded,statement_es
+Q01,Clarity and comprehensibility,no,La arquitectura es clara y fácil de entender en cuanto a su estructura y objetivos.
+Q02,Clarity and comprehensibility,no,Las diferentes capas de la arquitectura están bien definidas y funcionan de manera independiente y coordinada.
+Q03,Comparative value and recommendation,no,La arquitectura ofrece beneficios claros en comparación con otras soluciones arquitectónicas conocidas.
+Q04,Comparative value and recommendation,no,Recomendaría el uso de esta arquitectura en futuros proyectos de sistemas ciber-físicos sostenibles.
+Q05,Comparative value and recommendation,yes,Considero que hay aspectos de la arquitectura que necesitan revisión o mejora significativa
+Q06,Sustainability,no,La arquitectura está bien diseñada para soportar sistemas sostenibles a largo plazo.
+Q07,Sustainability,no,La arquitectura es adaptable a diferentes entornos y requisitos de sistemas.
+Q08,Sustainability,no,El sistema está bien preparado para responder a condiciones inesperadas o cambios en el entorno.
+Q09,Interoperability,no,¿Considera que la arquitectura de microservicios permite una integración efectiva y sin fricciones con otros sistemas y tecnologías?
+Q10,Interoperability,no,¿Evalúa que la independencia tecnológica planteada es clara y viable dentro de la arquitectura?
+Q11,Security,no,¿Piensa que el gateway de seguridad es adecuado para proteger la comunicación y controlar el acceso al sistema?
+Q12,Security,no,¿Considera que los mecanismos de seguridad en la arquitectura son suficientes para proteger los datos y la privacidad de los usuarios?
+Q13,Maintainability,no,¿La definición de alcance y funcionalidad para cada microservicio facilita la modularidad y mantenimiento del sistema?
+Q14,Maintainability,no,¿Cree que la modularidad propuesta es suficientemente clara para realizar mejoras y actualizaciones sin afectar la arquitectura global?
+Q15,Adaptability,no,¿Considera que el uso del método MAPE-K es adecuado para responder a las incertidumbres que puedan surgir en el sistema?
+Q16,Adaptability,no,¿Evalúa que el sistema es suficientemente flexible para adaptarse a cambios sin comprometer su funcionamiento?
+Q17,Performance,no,"¿Cree que la implementación de funciones de ajuste o ""fitness functions"" es eficaz para monitorear y optimizar el desempeño del sistema?"
+Q18,Performance,no,¿Considera que la arquitectura responde de manera oportuna a las necesidades de ajuste de rendimiento cuando el sistema lo requiere?
+Q19,Energy efficiency,no,¿Evalúa que las estrategias de caching y monitoreo de consumo energético ayudan a mejorar el desempeño del sistema?
+Q20,Energy efficiency,no,¿Cree que el diseño del sistema realmente contribuye a una reducción en el consumo de energía?
+Q21,Scalability,no,¿Piensa que la descomposición funcional y el uso de diferentes tecnologías permite una escalabilidad eficiente y flexible?
+Q22,Scalability,no,¿Considera que el diseño de la arquitectura permite expandir el sistema para futuros crecimientos o cambios de demanda?
+Q23,Reliability,no,"¿Evalúa que las funciones de ajuste ""fitness functions"" permiten monitorear y mantener la confiabilidad del sistema de manera efectiva?"
+Q24,Reliability,no,¿Cree que el sistema es capaz de responder adecuadamente ante fallos o interrupciones inesperadas?

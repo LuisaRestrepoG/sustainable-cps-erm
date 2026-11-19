@@ -1,0 +1,19 @@
+# Monolithic baseline: the same ERM-HS1 logic in a single process
+name: erm-mono
+services:
+  monolith:
+    image: erm-hs1:1.0
+    restart: always
+    environment: { SERVICE: monolith }
+  loadgen:
+    image: erm-hs1:1.0
+    profiles: ["load"]
+    restart: "no"
+    command: ["python", "/loadgen/loadgen.py"]
+    volumes: ["${OUT_DIR:-./out}:/out"]
+    environment:
+      TARGET: http://monolith:8000/readings
+      N_DEVICES: "${N_DEVICES:-10}"
+      DURATION: "${DURATION:-30}"
+      SEED: "${SEED:-1}"
+      OUT: "/out/${RUN_ID:-run}.json"

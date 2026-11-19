@@ -1,0 +1,39 @@
+# Microservice deployment of ERM-HS1 (framework layers: controller, microservice, knowledge, resource)
+name: erm-micro
+x-svc: &svc
+  image: erm-hs1:1.0
+  restart: always
+services:
+  gateway:
+    <<: *svc
+    environment: { SERVICE: gateway, ERM_URLS: "${ERM_URLS:-http://erm1:8000}" }
+  erm1:
+    <<: *svc
+    environment: { SERVICE: erm, CACHE_TTL: "${CACHE_TTL:-0}" }
+  erm2:
+    <<: *svc
+    profiles: ["replica"]
+    environment: { SERVICE: erm, CACHE_TTL: "${CACHE_TTL:-0}" }
+  profile:
+    <<: *svc
+    environment: { SERVICE: profile }
+  store:
+    <<: *svc
+    environment: { SERVICE: store }
+  actuator:
+    <<: *svc
+    environment: { SERVICE: actuator }
+  loadgen:
+    image: erm-hs1:1.0
+    profiles: ["load"]
+    restart: "no"
+    command: ["python", "/loadgen/loadgen.py"]
+    volumes: ["${OUT_DIR:-./out}:/out"]
+    environment:
+      TARGET: http://gateway:8000/readings
+      N_DEVICES: "${N_DEVICES:-10}"
+      DURATION: "${DURATION:-30}"
+      SEED: "${SEED:-1}"
+      OUT: "/out/${RUN_ID:-run}.json"
+      CRASH_AT: "${CRASH_AT:--1}"
+      CRASH_URL: "${CRASH_URL:-}"
